@@ -51,5 +51,51 @@ namespace WebAPI.Controllers
                 return "Failed to Add";
             }
         }
+
+        public string Put(Employee emp)
+        {
+            try
+            {
+                DataTable table = new DataTable();
+
+                string query = @"update dbo.Employee set EmpName = '" + emp.EmpName + @"',Dept = '" + emp.Dept + @"',Mail = '" + emp.Mail + @"',DOJ = '" + emp.DOJ + @"' where ID = " + emp.ID + @"";
+
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeAppDB"].ConnectionString))
+                using (var cmd = new SqlCommand(query, con))
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    da.Fill(table);
+                }
+                return "Updated Successfully";
+            }
+            catch
+            {
+                return "Failed to Update";
+            }
+        }
+
+        public string Delete(int id)
+        {
+            try
+            {
+                DataTable table = new DataTable();
+
+                string query = @"delete from dbo.Employee where ID = " + id;
+
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeAppDB"].ConnectionString))
+                using (var cmd = new SqlCommand(query, con))
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    da.Fill(table);
+                }
+                return "Removed Successfully";
+            }
+            catch
+            {
+                return "Failed to Remove";
+            }
+        }
     }
 }
