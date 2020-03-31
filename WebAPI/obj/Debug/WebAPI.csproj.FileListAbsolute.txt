@@ -80,3 +80,6 @@ E:\Projectzz\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 E:\Projectzz\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 E:\Projectzz\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 E:\Projectzz\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+E:\Projectzz\WebAPI\WebAPI\bin\System.Web.Cors.dll
+E:\Projectzz\WebAPI\WebAPI\bin\System.Web.Http.Cors.dll
+E:\Projectzz\WebAPI\WebAPI\bin\System.Web.Http.Cors.xml
