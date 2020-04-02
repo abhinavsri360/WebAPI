@@ -26,7 +26,6 @@ namespace WebAPI
 
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(
                 new MediaTypeHeaderValue("text/html"));
-            config.EnableCors(new EnableCorsAttribute("http://localhost:3000"," * "," * ")); 
         }
     }
 }
